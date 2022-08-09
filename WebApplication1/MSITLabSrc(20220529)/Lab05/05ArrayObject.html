@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>05ArrayObject.html</title>
+</head>
+<body>
+    <script>
+        //Array 物件
+
+        //let myfoods = [["apple", "banana", "grape"], ["pork", "beef"]];
+        // for (let i = 0, maxi = myfoods.length; i < maxi; i++) {
+        //     for (let j = 0, maxj = myfoods[i].length; j < maxj; j++) {
+        //         console.log(myfoods[i][j]);
+        //     }
+        //}
+        //console.log("=========");
+        //for (let F of myfoods) {
+        //    console.log(F);//F代表索引[0,][1,]
+        //    for (let V of F) {
+        //        console.log(V);//V代表[0,1],[0,2],[0,3],[1,1],[1,2]
+        //    }
+        //}
+
+        //Array 方法
+        
+        let a = ["a", "b", "c"];
+        let m = ["apple", "banana", "grape"];
+        console.log(a);
+        console.log(a.concat(m));
+        console.log(a.reverse());
+        console.log(a.join("-"));
+        a.push("q", "w", "e");
+        console.log(a);
+        a.pop();
+        console.log(a);
+        console.log(a.slice(0,5));
+        console.log(a.splice(2,4,"y"));
+    </script>
+</body>
+</html>

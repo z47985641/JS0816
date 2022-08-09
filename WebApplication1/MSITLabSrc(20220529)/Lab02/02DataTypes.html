@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>02DataTypes.html</title>
+</head>
+<body>   
+    <script>
+        //數字變數
+        let a = 123;
+        console.log(`a=${a},typeof a = ${typeof a}`);
+        //字串變數
+        a = "asd";
+        console.log(`a=${a},typeof a = ${typeof a}`);
+        //布林變數             
+        a = false;
+        let b = 5 +a;
+        console.log(`a=${a},typeof a = ${typeof a}`);
+        console.log(`a=${b},typeof a = ${typeof b}`);
+
+        if (b)
+            window.alert(true);
+        else
+            window.alert(false);
+
+        //null
+        a = null;
+        console.log(`a=${a},typeof a = ${typeof a}`);
+        //如果沒有初始值，JavaScript會自動將變數的值初始化為undefined(預設值 default value)        
+        let n;
+        console.log(`a=${n},typeof a = ${typeof n}`);
+        //字串轉換為數值
+        console.log(`parseInt("123.45")=${parseInt("123.45")}`)
+        console.log(`parseInt("12a3.45")=${parseInt("12a3.45")}`)
+        console.log(`parseInt("a123.45")=${parseInt("a123.45")}`)
+        console.log("===============")
+        console.log(`Number("123.45")=${Number("123.45")}`)
+        console.log(`Number("12a3.45")=${Number("12a3.45")}`)
+        console.log(`Number("a123.45")=${Number("a123.45")}`)
+
+
+        //數值轉換為字串
+        let P = 23.5;
+        console.log(b);
+        console.log(`b=${b},typeof b = ${typeof b}`);
+        console.log(typeof `typeof b = ${b}`);
+        console.log(P.toString());
+        console.log(typeof P.toString());
+
+        a = 1;
+        a++;
+        console.log(a);
+
+        a = 1;
+        ++a;
+        console.log(a);
+
+        a = 1;
+        a=a+1;
+        console.log(a);
+
+        a = 1;
+        b = 10 * a++;
+        console.log(b);
+
+        a = 1;
+        b = 10 * ++a;
+        console.log(b);
+
+        let e = "abc";
+        console.log(1 || 2);
+        console.log(1 && 2);
+        console.log(e || 0);
+        console.log(e && 0);
+
+
+    </script>
+</body>
+</html>

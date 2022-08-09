@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <title>01functionMethod.html</title>
+</head>
+<body>
+    <script>
+        //==========定義函數==================
+        //方法一函數宣告，定義帶參數的函數
+        function fadd1(a, b) {
+            return (a + b);
+        }
+        //==========函數呼叫==================
+        //呼叫帶參數的函數
+        console.log(`fadd1(10, 20) = ${fadd1(10, 20)}`);
+        //JavaScript沒有規定function的參數及呼叫function時給予的參數數量必須要一致
+        //少掉的參數為undefined，而多的參數會被忽略
+        function fadd2(a, b=100) {
+            return (a + b);
+        }
+        //雖方法內變數被定義數值，但傳入有值時，以傳入為主
+        console.log(`fadd2(10, 20) = ${fadd2(10, 20)}`);
+        console.log(`fadd2(10, 20, 30) = ${fadd2(10, 20, 30)}`);
+
+        //預設參數值(ES6)
+        function fadd3(a, b = 100) {
+            return (a + b);
+        }
+        console.log(`fadd3(10) = ${fadd3(10)}`);
+
+
+        //console.log("==========================")
+        //console.log(`fadd3(10) = ${fadd3(10)}`);
+
+        //==========定義函數==================
+        //方法二暱名函數
+        let fadd4 = function (a, b) {
+            return (a + b);
+        }
+        console.log(`fadd4(10,20) = ${fadd4(10)}`);
+
+
+
+        
+
+        //==========定義函數==================
+        //方法三箭頭函數(arrow function)
+        let fadd5 = (a, b) => {
+            return (a + b);
+        }
+        console.log(`fadd5(20,30) = ${fadd5(20,30)}`);
+
+        //函數沒有參數
+        let fadd6 = () => {
+            return 3000;
+        }
+        console.log(`fadd6() = ${fadd6()}`);
+        //如果statement 只有一行，return 和 {} 可省略
+        let fadd7 = (a, b) => a + b;
+        console.log(`fadd7(70,30) = ${fadd7(70, 30)}`);
+
+
+        //只有一個參數，()可省略
+    
+        let fadd8 = a => a + 5000;
+        console.log(`fadd8(70) = ${fadd8(70)}`);
+
+
+        //單呼叫方法名稱則印出方法內容
+
+
+        console.log(`fadd6= ${fadd6}`);
+        console.log(`fadd7= ${fadd7}`);
+        console.log(`fadd8= ${fadd8}`);
+        fadd7 = fadd6;
+        fadd8 = fadd7;
+        console.log(`new fadd7= ${fadd7}`);
+        console.log(`new fadd8= ${fadd8}`);
+        console.log(`new fadd8()= ${fadd8()}`);
+
+    </script>
+</body>
+</html>
