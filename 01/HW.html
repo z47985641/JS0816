@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        
+        table {
+            margin:auto;
+            background-color: #C4E1E1;
+            border-collapse: collapse;
+            padding: 2px;
+            border: 5px solid #5CADAD;
+        }
+        td {
+            padding: 2px;
+            border-right: 2px solid #5CADAD;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" style="color: #AE0000"></div>
+    <script>
+        let s = document.getElementById("div1");
+        let ss = "<table>"
+
+        for (let i = 1; i < 10; i++) {
+            ss += "<tr>";
+            for (let j = 1; j < 10; j++) {
+                ss += `<td> ${j} * ${i} = ${i * j}</td>`;
+                }
+            ss += "</tr>";
+        }
+
+        s.innerHTML =ss+"</table>" ;
+
+    </script>
+</body>
+</html>
