@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        * {
+            float: none;
+        }
+        .div1 {
+            width: 700px;
+            font-size: 24px;
+            border: 2px solid #FF8000;
+            background-color: #FFEEDD;
+            margin: auto;
+        }
+        h5 {
+            color: #BEBEBE;
+        }
+        span {
+            font-size: 24px;
+            color: #EA0000;
+        }
+        p {
+            font-size: 36px;
+            color: #DEDEBE;
+            text-align:justify;
+        }
+     
+        
+    </style>
+</head>
+<body>
+    <div class="div1">
+
+        <div>
+            姓名 :
+            <input type="text" id="username" size="15" maxlength="50" />
+            <span id="textN">*</span>
+        </div>
+        <h5>(1.不可空白 2.至少兩個字以上 3.必須全部為中文字)</h5>
+        <hr />
+        <div>
+            密碼 :
+            <input type="password" id="password" size="15" maxlength="50" />
+            <span id="textP">*</span>
+        </div>
+        <h5>(1.不可空白 2.至少六個字以上 3.必須包含英數字、特殊字元!@#$%^&)</h5>
+        <hr />
+        <div>
+            日期 :
+            <input type="text" id="date" size="15" maxlength="50" />
+            <span id="textD">*</span>
+        </div>
+        <h5>格式 : 西元 / 月 / 日(yyyy/mm/dd)</h5>
+        <hr />
+    </div>
+    <script>
+        let getnameid = document.getElementById("username");
+        let getpwid = document.getElementById("password");
+        let getdateid = document.getElementById("date");
+        let gettextN = document.getElementById("textN");
+        let gettextP = document.getElementById("textP");
+        let gettextD = document.getElementById("textD");
+
+
+
+        getnameid.addEventListener('blur', function ()
+        {
+            let nameRule = /[!\u0022#$%&'()*+,./:;<=>?@[\]\^_`{|}~-]/;
+            let nameRule2 = /\w/;
+
+            if (getnameid.value == "") {
+                gettextN.innerHTML = "不得空白";
+                gettextN.style.color = "red";
+            }
+            else if (getnameid.value.length <3){
+                gettextN.innerHTML = "字數太短";
+                gettextN.style.color = "red";
+            }
+            else if (nameRule.test(getnameid.value)) {
+                gettextN.innerHTML = "姓名需全為中文";
+                gettextN.style.color = "red";
+            }
+            else if (nameRule2.test(getnameid.value)) {
+                gettextN.innerHTML = "姓名需全為中文";
+                gettextN.style.color = "red";
+            }
+            else {
+                gettextN.innerHTML = "正確";
+                gettextN.style.color = "#9AFF02";
+            }
+
+        }, false);
+
+        getpwid.addEventListener('blur', function () {
+            let nameRule = /[!\u0022#$%&'()*+,./:;<=>?@[\]\^_`{|}~-]/;
+            let nameRule2 = /[A-Za-z]/;
+            let nameRule3 = /[0-9]/;
+
+            if (getpwid.value == "") {
+                gettextP.innerHTML = "不得空白";
+                gettextP.style.color = "red";
+            }
+            else if (getpwid.value.length < 7) {
+                gettextP.innerHTML = "字數太短";
+                gettextP.style.color = "red";
+            }
+            else if (nameRule.test(getpwid.value) == false) {
+                gettextP.innerHTML = "密碼需要有符號";
+                gettextP.style.color = "red";
+            }
+            else if (nameRule2.test(getpwid.value) == false) {
+                gettextP.innerHTML = "密碼需要有英文";
+                gettextP.style.color = "red";
+            }
+            else if (nameRule3.test(getpwid.value) == false) {
+                gettextP.innerHTML = "密碼需要有數字";
+                gettextP.style.color = "red";
+            }
+            else {
+                gettextP.innerHTML = "正確";
+                gettextP.style.color = "#9AFF02";
+            }
+
+        }, false);
+
+        getdateid.addEventListener('blur', function () {
+            let nameRule = /[0-9]{4,4}\/[0-9]{2,2}\/[0-9]{2,2}$/;
+
+            if (getdateid.value == "") {
+                gettextD.innerHTML = "不得空白";
+                gettextD.style.color = "red";
+            }
+            else if (nameRule.test(getdateid.value) == false) {
+                gettextD.innerHTML = "請依照日期格式填寫";
+                gettextD.style.color = "red";
+            }
+            else {
+                gettextD.innerHTML = "正確";
+                gettextD.style.color = "#9AFF02";
+            }
+
+        }, false);
+
+    </script>
+   
+</body>
+</html>
