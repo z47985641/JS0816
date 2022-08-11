@@ -31,11 +31,20 @@
         
 
         //使用document.querySelector()
-       
-
+        let qs1 = document.querySelector("td");
+        console.log(qs1);
+        let qs2 = document.querySelector(".myclass");
+        console.log(qs2);
+        let qs3 = document.querySelector("#td1");
+        console.log(qs3.innerHTML);
 
         //使用document.querySelectorAll()
-        
+        let qsa1 = document.querySelectorAll("td");
+        console.log(qsa1.item(0).innerHTML);
+        let qsa2 = document.querySelectorAll(".myclass");
+        console.log(qsa2);
+        let qsa3 = document.querySelectorAll("#td1");
+        console.log(qsa3[0].innerHTML);
     </script>
 </body>
 </html>
