@@ -26,7 +26,10 @@
         document.querySelector("#idsubmit").addEventListener("click",submitf);
 
         function checkf() {
-
+            console.log(document.forms);
+            console.log(document.forms.length);
+            console.log(document.forms[0].elements);
+            console.log(document.forms[0].length);
         }
 
         function resetf() {
@@ -34,7 +37,11 @@
         }
 
         function submitf() {
-
+            let thename = document.getElementsByName("txtName")[0].value;
+            if (thename == "")
+                document.querySelector("#idsp").innerHTML = "不要再鬧了~~";
+            else
+                document.forms[0].submit();
         }
     </script>
 </body>
