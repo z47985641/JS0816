@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        div{
+            width:800px;
+            margin:auto;
+            padding:10px;
+
+        }
+        image{
+            padding:0px;
+            margin:0px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img title="1" id="image01" src="image/01.png" />
+        <img title="2" id="image02" src="image/01.png" />
+        <img title="3" id="image03" src="image/01.png" />
+        <img title="4" id="image04" src="image/01.png" />
+        <img title="5" id="image05" src="image/01.png" />
+    </div>
+   
+    <script>
+        let areas = document.querySelectorAll("img");
+        for (let area of areas) {
+            console.log(area);
+            area.addEventListener("mouseover", mouseOver);
+            area.addEventListener("mouseout", mouseOut);
+        }
+
+        function mouseOver() {
+            document.images[this.id.substr(5)].src = "mage/02.png";
+        }
+
+
+        function mouseOut() {
+            document.images[0].src = "image/01.png";
+        }
+    </script>
+   
+</body>
+</html>

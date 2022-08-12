@@ -68,6 +68,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MSITLabSrc%2820220529%29\favicon.ico" />
+    <Content Include="MSITLabSrc%2820220529%29\HW\HW03.html" />
+    <Content Include="MSITLabSrc%2820220529%29\HW\HW01.html" />
+    <Content Include="MSITLabSrc%2820220529%29\HW\HW02.html" />
+    <Content Include="MSITLabSrc%2820220529%29\HW\HW05.html" />
+    <Content Include="MSITLabSrc%2820220529%29\HW\image\01.png" />
+    <Content Include="MSITLabSrc%2820220529%29\HW\image\02.png" />
+    <Content Include="MSITLabSrc%2820220529%29\HW\image\cancel.png" />
+    <Content Include="MSITLabSrc%2820220529%29\HW\image\fail.png" />
+    <Content Include="MSITLabSrc%2820220529%29\HW\image\star.png" />
     <Content Include="MSITLabSrc%2820220529%29\Lab01\02getElementContent.html" />
     <Content Include="MSITLabSrc%2820220529%29\Lab01\HtmlPage1.html" />
     <Content Include="MSITLabSrc%2820220529%29\Lab01\first.js" />

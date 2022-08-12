@@ -3,6 +3,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>01DOM1.html</title>
+    <style>
+        h1{
+            background-color:antiquewhite;
+        }
+        ul {
+            background-color: antiquewhite;
+        }
+        li{
+            background-color:beige;
+        }
+        p {
+            background-color: beige;
+        }
+    </style>
 </head><body><h1>Hello DOM</h1><p>I am a JavaScript</p>
 	<ul>
 		<li>aaaaa</li>
@@ -20,19 +34,26 @@
         //nodeType 讀取節點類型
         //*****************************************
 
-        alert(document.nodeType);  //9
-        alert(document.nodeName);  //#document
-        alert(document.nodeValue);  //null
+        //alert(document.nodeType);  //9
+        //alert(document.nodeName);  //#document
+        //alert(document.nodeValue);  //null
 
         //取得根元素 documentElement
         let root = document.documentElement;  //HTML
 
+        //alert(root.nodeType);//1
+        //alert(root.nodeName);//html
+        //alert(root.nodeValue);//null
 
         let thebody = root.childNodes[1];  //BODY
+        //alert(thebody.nodeName); //body
+        //alert(thebody.childNodes[1].nodeName);//p
+        //alert(thebody.childNodes[1].childNodes[0].nodeValue);//I am a JavaScript
+
 
 
         let theNode = root.childNodes[1].childNodes[3].childNodes[3];  //LI
-        //alert(root.childNodes[1].childNodes[3].nodeName);
+        //alert(root.childNodes[1].childNodes[3].nodeName);//ul
         //alert(theNode.nodeName);
         //alert(theNode.firstChild.nodeValue);  //bbbbb
         //alert(theNode.previousSibling.previousSibling.firstChild.nodeValue);  //aaaaa
@@ -47,6 +68,10 @@
             //alert(lis.item(i).firstChild.nodeValue);
             //alert(lis[i].firstChild.nodeValue);
 
+        }
+        for (let i of lis) {
+            alert(i.firstChild.nodeValue);
+        //    alert(i.innerHTML);
         }
     </script>
 </body>

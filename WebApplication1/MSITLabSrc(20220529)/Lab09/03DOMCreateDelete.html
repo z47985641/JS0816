@@ -6,14 +6,23 @@
 </head>
 
 <body>
-    <div id="iddiv">div</div>
+    <!--<div id="iddiv">div</div>-->
     <input type="button" id="CEle" value="CreateElement">
-
+    <input type="button" id="CEle2" value="DeleteElement">
     <script>
         document.querySelector("#CEle").addEventListener("click", CreateElement)
+        document.querySelector("#CEle2").addEventListener("click", DeleteElement)
+
+        function DeleteElement() {
+            let eleImg = document.getElementById("iddiv");
+            eleImg.remove();
+        }
 
         function CreateElement() {
-            let theDIV = document.querySelector("#iddiv");  //取得div物件
+            let root = document.documentElement.lastElementChild; //設定root 代表html-> body
+            let theDIV = document.createElement("div");  //建立div物件
+            theDIV.setAttribute("id", "iddiv");//
+            root.appendChild(theDIV);//
 
             let eleP = document.createElement("p");
             let txtP = document.createTextNode("Hello World");
@@ -23,7 +32,7 @@
 
             let eleImg = document.createElement("img");
             eleImg.setAttribute("src", "DOM/DOMImage/rabbit-hat.gif");
-
+            eleImg.setAttribute("id", "idimg");
             theDIV.appendChild(eleImg);
         }
     </script>
