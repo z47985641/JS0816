@@ -28,18 +28,17 @@
     <script>
         let areas = document.querySelectorAll("img");
         for (let area of areas) {
-            console.log(area);
             area.addEventListener("mouseover", mouseOver);
-            area.addEventListener("mouseout", mouseOut);
         }
 
         function mouseOver() {
-            document.images[this.id.substr(5)].src = "mage/02.png";
-        }
-
-
-        function mouseOut() {
-            document.images[0].src = "image/01.png";
+            for (let i = this.id.substr(6) - 1; i > -1; i--) {
+                document.images[i].src = "image/02.png";
+            }
+            for (let i = this.id.substr(6) ; i < 5; i++) {
+                console.log(i);
+                document.images[i].src = "image/01.png";
+            }
         }
     </script>
    
