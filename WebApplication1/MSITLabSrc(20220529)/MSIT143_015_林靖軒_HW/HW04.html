@@ -150,11 +150,11 @@
         imgChange();
 
         function imgChange() {
-            i++
             if (i > 6)
                 i = 1;
             document.getElementById("imgMain").src = "image/img" + i + ".png";
             document.getElementById("aMain").href = document.getElementById("a" + i).href;
+            i++
         }
 
         function imgBack() {
