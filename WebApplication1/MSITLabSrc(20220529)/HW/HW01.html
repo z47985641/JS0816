@@ -3,25 +3,80 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>HW01</title>
     <style>
-         
+
         table {
-            margin:auto;
+            margin: auto;
             background-color: #C4E1E1;
             border-collapse: collapse;
             padding: 2px;
             border: 5px solid #5CADAD;
         }
+        #div1{
+            margin:30px;
+        }
+
         td {
-            width:80px;
-            height:30px;
+            width: 80px;
+            height: 30px;
             padding: 2px;
             border-right: 5px solid #5CADAD;
         }
+
+        #mainDiv {
+            background-color: antiquewhite;
+            border: 2px solid antiquewhite;
+            border-radius: 50px;
+            width: 1200px;
+            height: 150px;
+            margin: auto;
+            padding: 30px;
+        }
+
+        #D01 {
+            background-color: azure;
+            border: 2px solid azure;
+            width: 450px;
+            height: 50px;
+            margin: auto;
+            padding: 0px;
+            text-align: center;
+            font-size: 36px;
+            line-height: 50px;
+        }
+
+        #DDD1 {
+            background-color: azure;
+            width: 50px;
+            height: 50px;
+            margin: 50px 0px 0px 373px;
+            float: left;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        #DDD {
+            background-color: azure;
+            width: 50px;
+            height: 50px;
+            margin: 50px 0px 0px 51px;
+            float: left;
+            text-align: center;
+            line-height: 50px;
+        }
     </style>
 </head>
+
 <body>
+    <div id="mainDiv">
+        <p id="D01">MSIT143 015 林靖軒</p>
+        <a href="HW01.html"><div id="DDD1">HW1</div></a>
+        <a href="HW02.html"><div id="DDD">HW2</div></a>
+        <a href="HW03.html"><div id="DDD">HW3</div></a>
+        <a href="HW04.html"><div id="DDD">HW4</div></a>
+        <a href="HW05.html"><div id="DDD">HW5</div></a>
+    </div>
     <div id="div1" style="color: #AE0000"></div>
     <script>
         let s = document.getElementById("div1");
@@ -31,11 +86,11 @@
             ss += "<tr>";
             for (let j = 1; j < 10; j++) {
                 ss += `<td> ${j} * ${i} = ${i * j}</td>`;
-                }
+            }
             ss += "</tr>";
         }
 
-        s.innerHTML =ss+"</table>" ;
+        s.innerHTML = ss + "</table>";
 
     </script>
 </body>

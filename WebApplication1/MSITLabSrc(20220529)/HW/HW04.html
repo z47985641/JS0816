@@ -2,11 +2,12 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>HW04</title>
     <style>
         * {
-           /* border: solid 1px gray;*/
+            /* border: solid 1px gray;*/
         }
+
         .imgS {
             width: 100px;
         }
@@ -14,62 +15,170 @@
         .main {
             width: 500px;
             height: 500px;
-            margin: auto;
+            margin:30px  auto 10px auto;
         }
 
         .mainS {
-            width: 840px;
-            height: 140px;
-            margin: auto;
+            width: 800px;
+            height: 100px;
+            margin:0px  auto;
         }
 
         .divSmall {
             float: left;
-            padding: 20px;
+            padding: 10px;
         }
+        .divSmall1 {
+            float: left;
+            padding: 10px 10px 10px 50px;
+        }
+
         .contor {
             width: 500px;
-            height: 100px;
-            margin: auto;
+            height: 80px;
+            margin: 10px auto 10px auto;
         }
+
         .imgC {
             width: 60px;
-            padding:0px 30px;
+            padding: 0px 30px;
+        }
+        .imgC1 {
+            width: 60px;
+            padding: 0px 30px 0px 70px;
+        }
+
+        .imgMain {
+            width: 500px;
+        }
+
+        #mainDiv {
+            background-color: antiquewhite;
+            border: 2px solid antiquewhite;
+            border-radius: 50px;
+            width: 1200px;
+            height: 150px;
+            margin: auto;
+            padding: 30px;
+        }
+
+        #D01 {
+            background-color: azure;
+            border: 2px solid azure;
+            width: 450px;
+            height: 50px;
+            margin: auto;
+            padding: 0px;
+            text-align: center;
+            font-size: 36px;
+            line-height: 50px;
+        }
+
+        #DDD1 {
+            background-color: azure;
+            width: 50px;
+            height: 50px;
+            margin: 50px 0px 0px 373px;
+            float: left;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        #DDD {
+            background-color: azure;
+            width: 50px;
+            height: 50px;
+            margin: 50px 0px 0px 51px;
+            float: left;
+            text-align: center;
+            line-height: 50px;
         }
     </style>
 </head>
+
 <body>
-    <div class="main">01</div>
+    <div id="mainDiv">
+        <p id="D01">MSIT143 015 林靖軒</p>
+        <a href="HW01.html"><div id="DDD1">HW1</div></a>
+        <a href="HW02.html"><div id="DDD">HW2</div></a>
+        <a href="HW03.html"><div id="DDD">HW3</div></a>
+        <a href="HW04.html"><div id="DDD">HW4</div></a>
+        <a href="HW05.html"><div id="DDD">HW5</div></a>
+    </div>
+    <div class="main" id="main">
+        <a id="aMain" href="https://zh.wikipedia.org/zh-tw/%E5%A7%8A%E5%A6%B9_(%E5%B0%88%E8%BC%AF)"><img class="imgMain" id="imgMain" src="image/img1.png" /></a>
+    </div>
     <div class="mainS">
-        <div class="divSmall">
-            <img class="imgS" src="image/1996.png" />
+        <div class="divSmall1">
+            <a id="a1" href="https://zh.wikipedia.org/zh-tw/%E5%A7%8A%E5%A6%B9_(%E5%B0%88%E8%BC%AF)"><img class="imgS" id="img1" src="image/img1.png" /></a>
         </div>
         <div class="divSmall">
-            <img class="imgS" src="image/1997.png" />
+            <a id="a2" href="https://zh.wikipedia.org/zh-tw/Bad_Boy_(%E5%BC%B5%E6%83%A0%E5%A6%B9%E5%B0%88%E8%BC%AF)"><img class="imgS" id="img2" src="image/img2.png" /></a>
         </div>
         <div class="divSmall">
-            <img class="imgS" src="image/2001.png" />
+            <a id="a3" href="https://music-tw.line.me/album/1031820"><img class="imgS" id="img3" src="image/img3.png" /></a>
         </div>
         <div class="divSmall">
-            <img class="imgS" src="image/2007.png" />
+            <a id="a4" href="https://zh.wikipedia.org/zh-tw/Star_(%E5%BC%B5%E6%83%A0%E5%A6%B9%E5%B0%88%E8%BC%AF)"><img class="imgS" id="img4" src="image/img4.png" /></a>
         </div>
         <div class="divSmall">
-            <img class="imgS" src="image/2014.png" />
+            <a id="a5" href="https://zh.wikipedia.org/zh-tw/%E5%81%8F%E5%9F%B7%E9%9D%A2"><img class="imgS" id="img5" src="image/img5.png" /></a>
         </div>
         <div class="divSmall">
-            <img class="imgS" src="image/2017.png" />
+            <a id="a6" href="https://zh.wikipedia.org/zh-tw/%E5%81%B7%E6%95%85%E4%BA%8B%E7%9A%84%E4%BA%BA"><img class="imgS" id="img6" src="image/img6.png" /></a>
         </div>
     </div>
     <div class="contor">
         <div class="divSmall">
-            <img class="imgC" src="image/back-arrow.png" />
+            <img class="imgC1" id="imgBack" src="image/back-arrow.png" />
         </div>
         <div class="divSmall">
-            <img class="imgC" src="image/right.png" />
+            <img class="imgC" id="imgRight" src="image/right.png" />
         </div>
         <div class="divSmall">
-            <img class="imgC" src="image/forward.png" />
+            <img class="imgC" id="imgForward" src="image/forward.png" />
         </div>
     </div>
+    <script>
+        document.getElementById("imgBack").addEventListener("click", imgBack);
+        document.getElementById("imgRight").addEventListener("click", imgRight);
+        document.getElementById("imgForward").addEventListener("click", imgForward);
+
+        let i = 1;
+        let t = window.setInterval(imgChange, 1000);
+
+        imgChange();
+
+        function imgChange() {
+            i++
+            if (i > 6)
+                i = 1;
+            document.getElementById("imgMain").src = "image/img" + i + ".png";
+            document.getElementById("aMain").href = document.getElementById("a" + i).href;
+        }
+
+        function imgBack() {
+            window.clearTimeout(t);
+            i--;
+            if (i < 1)
+                i = 6;
+            document.getElementById("imgMain").src = "image/img" + i + ".png";
+            document.getElementById("aMain").href = document.getElementById("a" + i).href;
+        }
+
+        function imgRight() {
+            imgChange();
+            t = window.setInterval(imgChange, 1000);
+        }
+
+        function imgForward() {
+            window.clearTimeout(t);
+            i++;
+            if (i > 6)
+                i = 1;
+            document.getElementById("imgMain").src = "image/img" + i + ".png";
+            document.getElementById("aMain").href = document.getElementById("a" + i).href;
+        }
+    </script>
 </body>
 </html>

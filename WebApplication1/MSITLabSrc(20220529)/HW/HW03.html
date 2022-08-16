@@ -2,45 +2,153 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>HW03</title>
     <style>
-        div{
-            width:800px;
-            margin:auto;
-            padding:10px;
-
+        div {
+            width: 700px;
+            margin: auto;
+            padding: 0px;
         }
-        image{
-            padding:0px;
-            margin:0px;
+        #image01{
+            padding:0px 0px 0px 35px;
+        }
+
+        img {
+            float: left;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #mainDiv {
+            background-color: antiquewhite;
+            border: 2px solid antiquewhite;
+            border-radius: 50px;
+            width: 1200px;
+            height: 150px;
+            margin: auto;
+            padding: 30px;
+        }
+
+        #D01 {
+            background-color: azure;
+            border: 2px solid azure;
+            width: 450px;
+            height: 50px;
+            margin: auto;
+            padding: 0px;
+            text-align: center;
+            font-size: 36px;
+            line-height: 50px;
+        }
+
+        #DDD1 {
+            background-color: azure;
+            width: 50px;
+            height: 50px;
+            margin: 50px 0px 0px 373px;
+            float: left;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        #DDD {
+            background-color: azure;
+            width: 50px;
+            height: 50px;
+            margin: 50px 0px 0px 51px;
+            float: left;
+            text-align: center;
+            line-height: 50px;
+        }
+        #divStar {
+            margin:30px auto;
+        }
+        p {
+            text-align: center;
         }
     </style>
 </head>
+
 <body>
-    <div>
-        <img title="1" id="image01" src="image/01.png" />
-        <img title="2" id="image02" src="image/01.png" />
-        <img title="3" id="image03" src="image/01.png" />
-        <img title="4" id="image04" src="image/01.png" />
-        <img title="5" id="image05" src="image/01.png" />
+    <div id="mainDiv">
+        <p id="D01">MSIT143 015 林靖軒</p>
+        <a href="HW01.html"><div id="DDD1">HW1</div></a>
+        <a href="HW02.html"><div id="DDD">HW2</div></a>
+        <a href="HW03.html"><div id="DDD">HW3</div></a>
+        <a href="HW04.html"><div id="DDD">HW4</div></a>
+        <a href="HW05.html"><div id="DDD">HW5</div></a>
     </div>
-   
+    <div id="divStar">
+        <p>點擊星星可以評論</p>
+        <p id="pText">評分為 :　   顆星</p>
+
+        <div>
+            <img title="1" id="image01" src="image/01.png" />
+            <img title="2" id="image02" src="image/01.png" />
+            <img title="3" id="image03" src="image/01.png" />
+            <img title="4" id="image04" src="image/01.png" />
+            <img title="5" id="image05" src="image/01.png" />
+        </div>
+    </div>
     <script>
         let areas = document.querySelectorAll("img");
+        let j = 0;
         for (let area of areas) {
+            area.addEventListener("click", imgclick);
+            area.addEventListener("dblclick", imgdblclick);
             area.addEventListener("mouseover", mouseOver);
+            area.addEventListener("mouseout", mouseOut);
         }
 
         function mouseOver() {
             for (let i = this.id.substr(6) - 1; i > -1; i--) {
                 document.images[i].src = "image/02.png";
             }
-            for (let i = this.id.substr(6) ; i < 5; i++) {
-                console.log(i);
+            for (let i = this.id.substr(6); i < 5; i++) {
                 document.images[i].src = "image/01.png";
             }
+            document.getElementById("pText").innerHTML = "評分為 :　" + this.id.substr(6) + "顆星";
+
         }
+        function mouseOut() {
+
+            for (let i = 0; i < 5; i++) {
+                document.images[i].src = "image/01.png";
+            }
+            document.getElementById("pText").innerHTML = "評分為 :　0顆星";
+
+        }
+
+        function imgclick() {
+            document.getElementById("pText").innerHTML = "您給的評分為 :　" + this.id.substr(6) + "顆星";
+            for (let area of areas) {
+                area.removeEventListener("click", imgclick);
+                area.removeEventListener("mouseover", mouseOver);
+                area.removeEventListener("mouseout", mouseOut);
+            }
+
+        }
+        function imgdblclick() {
+            document.getElementById("pText").innerHTML = "評分為 :　" + this.id.substr(6) + "顆星";
+            for (let area of areas) {
+                area.addEventListener("click", imgclick);
+                area.addEventListener("mouseover", mouseOver);
+                area.addEventListener("mouseout", mouseOut);
+            }
+            for (let i = this.id.substr(6) - 1; i > -1; i--) {
+                document.images[i].src = "image/02.png";
+            }
+            for (let i = this.id.substr(6); i < 5; i++) {
+                document.images[i].src = "image/01.png";
+            }
+
+
+        }
+
+
+
+
     </script>
-   
+
 </body>
 </html>

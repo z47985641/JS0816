@@ -3,35 +3,83 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>HW02</title>
     <style>
         * {
             float: none;
         }
+
         .div1 {
             width: 700px;
             font-size: 24px;
             border: 2px solid #FF8000;
             background-color: #FFEEDD;
-            margin: auto;
+            margin: 30px auto;
         }
+
         h5 {
             color: #BEBEBE;
         }
+
         span {
             font-size: 24px;
             color: #EA0000;
         }
-        p {
-            font-size: 36px;
-            color: #DEDEBE;
-            text-align:justify;
+
+
+        #mainDiv {
+            background-color: antiquewhite;
+            border: 2px solid antiquewhite;
+            border-radius: 50px;
+            width: 1200px;
+            height: 150px;
+            margin: auto;
+            padding: 30px;
         }
-     
-        
+
+        #D01 {
+            background-color: azure;
+            border: 2px solid azure;
+            width: 450px;
+            height: 50px;
+            margin: auto;
+            padding: 0px;
+            text-align: center;
+            font-size: 36px;
+            line-height: 50px;
+        }
+
+        #DDD1 {
+            background-color: azure;
+            width: 50px;
+            height: 50px;
+            margin: 50px 0px 0px 373px;
+            float: left;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        #DDD {
+            background-color: azure;
+            width: 50px;
+            height: 50px;
+            margin: 50px 0px 0px 51px;
+            float: left;
+            text-align: center;
+            line-height: 50px;
+        }
     </style>
 </head>
+
 <body>
+    <div id="mainDiv">
+        <p id="D01">MSIT143 015 林靖軒</p>
+        <a href="HW01.html"><div id="DDD1">HW1</div></a>
+        <a href="HW02.html"><div id="DDD">HW2</div></a>
+        <a href="HW03.html"><div id="DDD">HW3</div></a>
+        <a href="HW04.html"><div id="DDD">HW4</div></a>
+        <a href="HW05.html"><div id="DDD">HW5</div></a>
+    </div >
     <div class="div1">
 
         <div>
@@ -66,8 +114,7 @@
 
 
 
-        getnameid.addEventListener('blur', function ()
-        {
+        getnameid.addEventListener('blur', function () {
             let nameRule = /[!\u0022#$%&'()*+,./:;<=>?@[\]\^_`{|}~-]/;
             let nameRule2 = /\w/;
 
@@ -75,7 +122,7 @@
                 gettextN.innerHTML = "不得空白";
                 gettextN.style.color = "red";
             }
-            else if (getnameid.value.length <3){
+            else if (getnameid.value.length < 3) {
                 gettextN.innerHTML = "字數太短";
                 gettextN.style.color = "red";
             }
@@ -145,6 +192,6 @@
         }, false);
 
     </script>
-   
+
 </body>
 </html>
